@@ -1,0 +1,102 @@
+body {
+    background-color: #000;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-family: 'CircularSp', 'CircularSp-Arab', 'CircularSp-Hebr', 'CircularSp-Cyrl', 'CircularSp-Grek', 'CircularSp-Deva', 'sans-serif', 'Helvetica', 'Arial', 'sans-serif';
+}
+
+h1 {
+    font-size: 48px;
+    font-weight: 900;
+}
+h2 {
+    font-size: 40px;
+    font-weight: 700;
+}
+h3 {
+    font-size: 24px;
+    font-weight: 400;
+}
+h4 {
+    font-size: 16px;
+    font-weight: 400;
+}
+/* header */
+.header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.header__svg {
+    fill: #fff;
+    width: 132px;
+}
+.header__menu {
+    display: flex;
+    align-items:center;
+    list-style:none;
+    
+}
+.header__menu--li {
+    margin-right: 50px;  
+}
+.header__menu--li:hover {
+    color: #1cdf4c;
+}
+.header__menu--li:last-child {
+    padding-left: 20px;
+    border-left: 2px solid #fff;
+}
+.header__icon{
+    display: inline-block;
+    margin-right: 5px;
+    padding: 5px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    width: 25px;
+    fill:#fff;
+}
+.header__icon:hover {
+    fill: #1cdf4c;
+    border-color: #1cdf4c;
+}
+.header__arrow {
+    display: inline-block;
+    padding: 5px;
+    width: 15px;
+    fill:#fff;
+}
+.header__arrow:hover {
+    fill: #1cdf4c;
+}
+.header__profile--text{
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 20px;
+}
+
+/*Main*/
+
+.principal {
+    background: url("img/fondo.png") right top no-repeat , #202020 !important;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-position: right;
+    background-size: 50%, 400px,auto;
+    height: 550px;
+}
+.principal__img--payment {
+    width: 29px;
+    height: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+/* Footer */
+.footer {
+    background-color: #000;
+    padding-top: 50px;
+}
