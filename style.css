@@ -1,14 +1,22 @@
+:root {
+    --plan1: #FFD2D7;
+    --plan2: #C4B1D4;
+    --plan3: #FFC862;
+    --plan4: #A5BBD1;
+}
 body {
     background-color: #000;
     color: #fff;
+    fill: #fff;
     margin: 0;
     padding: 0;
     width: 100%;
     font-family: 'CircularSp', 'CircularSp-Arab', 'CircularSp-Hebr', 'CircularSp-Cyrl', 'CircularSp-Grek', 'CircularSp-Deva', 'sans-serif', 'Helvetica', 'Arial', 'sans-serif';
+    text-align: center;
 }
 
 h1 {
-    font-size: 48px;
+    font-size: 40px;
     font-weight: 900;
 }
 h2 {
@@ -23,6 +31,41 @@ h4 {
     font-size: 16px;
     font-weight: 400;
 }
+h5 {
+    font-size: 32px;
+}
+ul {
+    padding-left: 20px;
+}
+.button {
+    padding: 10px 30px;
+    border-radius: 30px;
+    box-sizing: border-box;
+    font-family: 'CircularSp', 'CircularSp-Arab', 'CircularSp-Hebr', 'CircularSp-Cyrl', 'CircularSp-Grek', 'CircularSp-Deva', 'sans-serif', 'Helvetica', 'Arial', 'sans-serif';
+    font-weight: 700;
+    font-size: 16px;
+}
+.button:hover {
+    padding: 12px 32px;
+}
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.align_left {
+    text-align: left;
+}
+.background_white {
+    background-color: #fff;
+    color: #000;
+}
+.baclground_pink {
+    background-color: #ad2489;
+}
+.background_morado_pink {
+    background-color:  #744B8B;
+}
 /* header */
 .header {
     display: flex;
@@ -30,7 +73,6 @@ h4 {
     align-items: center;
 }
 .header__svg {
-    fill: #fff;
     width: 132px;
 }
 .header__menu {
@@ -56,7 +98,6 @@ h4 {
     border: 1px solid #fff;
     border-radius: 50%;
     width: 25px;
-    fill:#fff;
 }
 .header__icon:hover {
     fill: #1cdf4c;
@@ -66,7 +107,6 @@ h4 {
     display: inline-block;
     padding: 5px;
     width: 15px;
-    fill:#fff;
 }
 .header__arrow:hover {
     fill: #1cdf4c;
@@ -80,12 +120,44 @@ h4 {
 /*Main*/
 
 .principal {
-    background: url("img/fondo.png") right top no-repeat , #202020 !important;
-    background-repeat: no-repeat;
-    background-position: top;
-    background-position: right;
-    background-size: 50%, 400px,auto;
-    height: 550px;
+    background: url("img/fondo.png") right top no-repeat , #181818 !important;
+    background-size: 50%, 400px, auto;
+    padding: 30px 18% 30px 15%;
+}
+.principal__section1 {
+    margin-bottom: 150px;
+    padding-right: 40em;
+}
+.principal__button {
+    margin: 20px 0px;
+}
+.principal__buttonget {
+    margin-right: 15px;
+    background-color: #FFD2D7;
+}
+.principal__buttonplans {
+    background-color: #000;
+    border: 1px solid #fff;
+    color: #fff;
+}
+.conditions {
+    font-size: 11px;
+    text-decoration: underline;
+}
+.principal__section2 {
+    margin-bottom: 150px;
+    padding: 0px 25%;
+}
+.principal__section2--table {
+    margin: 10px 15%;
+    border-collapse:collapse;
+}
+.table__row {
+    
+}
+.table__colum {
+    padding: 15px;
+    border-bottom: 1px solid #fff;
 }
 .principal__img--payment {
     width: 29px;
@@ -93,10 +165,104 @@ h4 {
     background-color: #fff;
     border-radius: 5px;
     padding: 5px;
+    margin-bottom: 20px;
+}
+.principal__section3--characteristics {
+    padding: 10px 400px;
+    border: 3px solid #744B8B;
+    border-radius: 10px;
+}
+.principal__section3--card {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: left;    
+}
+.principal__section3--articlecard {
+    
+    display: grid;
+    grid-template-rows: 1fr 2fr 0.7fr 1fr;
+    grid-template-columns: 1.3fr 1fr;
+    grid-template-areas: "title price" 
+    "description description"
+    "button button"
+    "conditions conditions";
+    margin: 20px 0px;
+    padding: 0px 20px;
+    width: 360px;
+    height: 380px;
+    border: 3px solid var(--plan1);
+    border-radius: 10px;
+}
+.principal__section3--articlecard:nth-child(1), .principal__section3--articlecard:nth-child(2) {
+    margin-right: 25px;
+}
+.principal__section3--articlecard:nth-child(2) {
+    border-color: var(--plan2);
+}
+.principal__section3--articlecard:nth-child(3) {
+    border-color: var(--plan3);
+}
+.principal__section3--articlecard:nth-child(4) {
+    border-color:  var(--plan4);
+}
+
+.principal__section3--titlecard {
+    grid-area: title;
+}
+.principal__section3--price {
+    grid-area: price;
+    margin-top: 30px;
+    text-align: right;
+    font-size: 18px;
+    font-weight: 700;
+}
+.pricipal__price--span {
+    font-size: 10px;
+}
+.principal__section3--description {
+    grid-area: description;
+} 
+.principal__section3--button {
+    grid-area: button;
+    margin: 0px auto;
+}
+.principal__buttonstudent {
+    background-color: var(--plan2);
+}
+.principal__buttonduo {
+    background-color: var(--plan3);
+}
+.principal__buttonfam {
+    background-color: var(--plan4);
+}
+.principal__section3--conditions {
+    grid-area: conditions;
+    text-align: center;
+    font-size: 12px;
+}
+.principal__section4--question {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 20px;
+    width: 100%;
+    border-bottom: 1px solid #2A2A2A;
+    text-align: left;
+    font-size: 18px;
+    font-weight: 900;
+}
+.principal__section4--question:hover {
+    background-color: #2A2A2A;
+    text-decoration: underline;
+}
+.main__arrow{
+    vertical-align: middle;
+    fill: #fff;
 }
 
 /* Footer */
 .footer {
-    background-color: #000;
+    
     padding-top: 50px;
 }
